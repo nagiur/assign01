@@ -1,0 +1,21 @@
+{% load custom_tags %}
+
+<h1 class="h1 text-center">Meals<h1/>
+
+<hr>
+
+<div class="row row-cols-1 row-cols-md-3 g-4">
+    
+    {% for meal in meals %}
+    <div class="col" id="{{meal.idMeal}}">
+        <div class="card">
+        <img src="{{meal.strMealThumb}}" class="card-img-top" alt="{{meal.strMeal}}">
+        <div class="card-body">
+            <h5 class="card-title">{{meal.strMeal}}</h5>
+        </div>
+        </div>
+    </div>
+    {% endfor %}
+
+</div>
+
